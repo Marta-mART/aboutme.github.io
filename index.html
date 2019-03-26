@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Po godzinach</title>
+	<meta name="description" content="Cała moja twórczość">
+	<meta name="keywords" content="portfolio, marta, glowacka, art, obrazy, rysunki, mart, mART, twórczość, artysta ">
+	<meta name="author" content="mART">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900&amp;subset=latin-ext" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Grand+Hotel|Lobster&amp;subset=latin-ext" rel="stylesheet"> 
+	<link href="lightbox/css/lightbox.css" rel="stylesheet">
+	
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		} 
+	</script>
+	
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+		
+			$(window).bind('scroll',function(e){
+			parallaxScroll();
+		});
+
+		function parallaxScroll(){
+			var scrolled = $(window).scrollTop();
+			$('#bg1').css('top',(0-(scrolled*.80))+'px');
+			$('#bg2').css('top',(0-(scrolled*.2))+'px');
+			$('#bg3').css('top',(0-(scrolled*.1))+'px');
+			$('#bg4').css('top',(0-(scrolled*.5))+'px');
+			$('#bg5').css('top',(0-(scrolled*.5))+'px');
+		}
+		
+	</script>
+		
+	<script src="jquery.scrollTo.min.js"></script>
+	<script>
+	
+		jQuery(function($)
+		{
+			//zresetuj scrolla
+			$.scrollTo(0);
+			
+			$('#link-home').click(function() {	$.scrollTo($('#home'), 500);	}	);
+			$('#link-about').click(function() {	$.scrollTo($('#link1'), 500);	}	);
+			$('#link-contact').click(function() {	$.scrollTo($('#contact'), 1000);	}	);
+			$('.strzalka-g').click(function() {	$.scrollTo($('body'), 1000);	}	);
+		}
+		);
+			
+	</script>
+
+	<script src="jquery-1.11.3.min.js"></script>
+	<script>
+			
+				$(document).ready(function() {
+				var NavY = $('.topnav').offset().top;
+				 
+				var stickyNav = function(){
+				var ScrollY = $(window).scrollTop();
+					  
+				if (ScrollY > NavY) { 
+					$('.topnav').addClass('sticky');
+				} else {
+					$('.topnav').removeClass('sticky'); 
+				}
+				};
+				 
+				stickyNav();
+				 
+				$(window).scroll(function() {
+					stickyNav();
+				});
+				});
+				
+	</script>
+	
+	
+</head>
+
+
+<body>
+	
+	<header>
+	<div id="home"></div>
+	<div id="paralax-bg">
+		
+			<nav class="topnav">
+				<ul class="menu">
+					<li><a id="link-home" href="#"><i class="icon-home"></i>HOME</a></li>
+					<li><a id="link-about" href="#">ABOUT</a></li>
+					<li><a id="link-contact" href="#">CONTACT</a></li>
+				</ul>
+				<div id="mart">mART</div>
+				<div style="clear: both;"></div>
+			</nav>
+			<div id="overlay">
+				<canvas id='canvas'></canvas>
+				<img class="imagelink" src="img/farby.jpg" alt="home"/>
+				
+				
+				<div id="bg1">
+						<h3>Inspiracja istnieje, <br/>
+						ale musi zastać Cię przy pracy.</h3>
+						<h1>Pablo Picasso</h1>
+				</div>
+			
+			</div>
+		
+	</div>
+	</header>
+	
+	<main>
+	
+	<div id="link1"></div>
+	<div id="bg2">
+		<div id="aboutme">
+			<h2>ABOUT ME</h2>
+			
+			<div id="container">
+					<div class="tekst1">Schowana na co dzień artystyczna dusza czasem próbuje się uwolnić i się jej to udaje. Wtedy kompulsywnie wyciągam z biurka kartkę papieru i coś, co ją pokryje. To dla mnie doskonały sposób na mindfullnessowe oczyszczenie umysłu i czysta przyjemność z patrzenia na to, jak z wcześniejszego bezkształtu wyłania się całość. Nie uczyłam się nigdy rysować, robię to raz na ruski rok, ale mam to w planach na daleką przyszłość, bo uważam, że można się tego nauczyć. Zapraszam do obejrzenia moich prac robionych "po godzinach".</div>
+					
+					<div class="wizytowka">
+						
+							<img data-aos="anim1" id="me" src="img/me2.png" alt="me"/>
+							<figcaption>Marta Głowacka | mART</figcaption>
+							<div id="icons">
+									<i class="icon-facebook"></i>
+									<i class="icon-tumblr"></i>
+									<i class="icon-deviantart"></i>
+									<i class="icon-wordpress"></i>
+									<i class="icon-youtube-play"></i>
+									
+							</div>
+						
+					</div>
+					
+					<div class="tekst2">Kim jestem? Studenką informatyki, po klasie matematyczno-fizycznej. Gryzą się we mnie dwie natury: techniczna, z czarnobiałymi liniami i artystyczna, kolorowa, czasem chaotyczna. Lubię sztukę w różnej formie: film, teatr, muzykę, śpiew i taniec. Uwielniam tworzyć, wymyślić sobie jakiś projekt i konsekwentnie dążyć do jego wykoniania. Gdy widzę w czymś cel, mogę siedzieć nad tym godzinami, nie czując upływu czasu. Gdybym miała się określić trzema słowami wybrałabym: kreatywna, wszechstronna i ambitna.</div>
+					
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+		</div>
+		
+		<article>
+		<div id="bg3">
+			<div id="galeria">
+				
+				<h2> GALERIA </h2>
+				<button class="strzalka" onclick="plusSlides(-1)">&#10094 </button>
+				<div id="buttons">
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span>
+				  <span class="dot" onclick="currentSlide(2)"></span>
+				  <span class="dot" onclick="currentSlide(3)"></span>
+				</div> 
+				</div>
+				<button class="strzalka" onclick="plusSlides(1)">&#10095 </button>
+				<div style="clear:both;"></div>
+				
+				
+				 <div class="slideshow-container">
+				 
+				  <div class="mySlides fade">
+						<div class="rysunki2d">
+							<div class="text">Rysunki 2D</div>
+							
+					
+							<div class="kafel">
+								<div class="photo" >
+									<a href="img/obrazy/frozen.jpg" data-lightbox="rys" data-title="Frozen"><img style="width: 311px; margin-top: -21px;" src="img/obrazy/frozen.jpg" alt="photo1" />
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/czarnobiale.jpg" data-lightbox="rys" data-title="Adele"><img style="width: 300px; margin-top: -8px;" src="img/obrazy/czarnobiale.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/kadr9.jpg" data-lightbox="rys" data-title="Duma"><img style="width: 300px; margin-top: -8px;" src="img/obrazy/kadr9.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/kapelusznikNEW.jpg" data-lightbox="rys" data-title="Kapelusznik"><img style="width: 300px; margin-top: -34px;" src="img/obrazy/kapelusznikNEW.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/kobieta.jpg" data-lightbox="rys" data-title="Lustro"><img style="width: 300px; margin-top: -8px;" src="img/obrazy/kobieta.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/calus.jpg" data-lightbox="rys" data-title="Pocałunek"><img style="width: 320px"; src="img/obrazy/calus.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/depp.jpg" data-lightbox="rys" data-title="Depp"><img style="width: 320px; margin-top: -15px; margin-left: -15px;" src="img/obrazy/depp.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/depp2.jpg" data-lightbox="rys" data-title="Depp"><img style="width: 300px"; src="img/obrazy/depp2.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/burton.jpg" data-lightbox="rys" data-title="Burton"><img style="width: 300px; margin-top: -4px;" src="img/obrazy/burton.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/OKONEWczarnerzesy.jpg" data-lightbox="rys" data-title="Oko"><img style="width: 300px"; src="img/obrazy/OKONEWczarnerzesy.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/robak.jpg" data-lightbox="rys" data-title="Ksiądz Robak aka Jacek Soplica"><img style="width: 340px" src="img/obrazy/robak.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/plo.jpg" data-lightbox="rys" data-title="Panna lekkich obyczajów"><img style="width: 330px; margin-top: -15px; margin-left: -15px;" src="img/obrazy/plo.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>					
+					
+				</div>
+				</div>
+
+				  <div class="mySlides fade">
+					<div class="inne">
+							<div class="kafel">
+								<div class="photo" >
+									<a href="img/obrazy/bullet.jpg" data-lightbox="rys2" data-title="Pocisk"><img style="width: 300px; margin-top: 15px;" src="img/obrazy/bullet.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/babeczka.jpg" data-lightbox="rys2" data-title="Babeczka FIMO"><img style="width: 300px; margin-top: -15px;" src="img/obrazy/babeczka.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/miszmasz.jpg" data-lightbox="rys2" data-title="Zeszyt"><img style="width: 300px; margin-top: 2px;" src="img/obrazy/miszmasz.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/mulan.jpg" data-lightbox="rys2" data-title="Mulan z plasteliny"><img style="width: 300px; margin-top: -34px;" src="img/obrazy/mulan.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/kroliczek.jpg" data-lightbox="rys2" data-title="Słoik z królikiem"><img style="width: 300px; margin-top: -38px;" src="img/obrazy/kroliczek.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/wszystko, co.jpg" data-lightbox="rys2" data-title="Zeszyt"><img style="width: 320px; margin-top: -8px;" src="img/obrazy/wszystko, co.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/origami.jpg" data-lightbox="rys2" data-title="Origami"><img style="width: 320px; margin-top: -15px; margin-left: -15px;" src="img/obrazy/origami.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/sowka.jpg" data-lightbox="rys2" data-title="Sówka z filcu"><img style="width: 360px; margin-top: 5px;" src="img/obrazy/sowka.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/zeszyt.jpg" data-lightbox="rys2" data-title="Zeszyt"><img style="width: 300px; margin-top: -15px;" src="img/obrazy/zeszyt.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/zeszyty.jpg" data-lightbox="rys2" data-title="Zeszyt"><img style="width: 300px; margin-top: -55px; margin-left: -15px;" src="img/obrazy/zeszyty.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/pudelko.jpg" data-lightbox="rys2" data-title="Pudełko"><img style="width: 340px; margin-top: -34px;" src="img/obrazy/pudelko.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/obrazy/sciana.jpg" data-lightbox="rys2" data-title="Graffiti"><img style="width: 700px; margin-top: 0px; margin-left: 0px;" src="img/obrazy/sciana.jpg" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>					
+					</div>
+					<div class="text">Różności</div>
+				  </div>
+
+				  <div class="mySlides fade">
+						<div class="rendery3d">
+								<div class="kafel">
+								<div class="photo" >
+									<a href="img/rendery/pokoj4przerobka.png" data-lightbox="rys3" data-title="Pokój skandynawski"><img style="width: 330px; margin-top: 0px;" src="img/rendery/pokoj4przerobka.png" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/babeczka.png"" data-lightbox="rys3" data-title="Babeczka"><img style="width: 300px; margin-top: -55px;" src="img/rendery/babeczka.png" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/lazienka_koniec2.png" data-lightbox="rys3" data-title="Łazienka"><img style="width: 320px; margin-top: 0px;" src="img/rendery/lazienka_koniec2.png" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/chataROZ.png" data-lightbox="rys3" data-title="Chata w górach"><img style="width: 330px; margin-top: 0px;" src="img/rendery/chataROZ.png" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/donutyPOPRAWIONE.png" data-lightbox="rys3" data-title="Donuty"><img style="width: 330px; margin-top: 0px;" src="img/rendery/donutyPOPRAWIONE.png" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/gory.png" data-lightbox="rys3" data-title="Góry"><img style="width: 350px; " src="img/rendery/gory.png" alt="photo1"/>
+									<span class="link" ><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/atomowki.png" data-lightbox="rys3" data-title="Atomówki"><img style="width: 350px; margin-top: 5px; margin-left: -35px;" src="img/rendery/atomowki.png" alt="photo1"/>
+									<span class="link"><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/gotyk.png" data-lightbox="rys3" data-title="Gotyk"><img style="width: 330px"; src="img/rendery/gotyk.png" alt="photo1"/>
+									<span class="link" ><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/jesien.png" data-lightbox="rys3" data-title="Jesień"><img style="width: 320px; margin-top: 0px;" src="img/rendery/jesien.png" alt="photo1"/>
+									<span class="link" ><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/ukulele.png" data-lightbox="rys3" data-title="Ukulele"><img style="width: 320px"; src="img/rendery/ukulele.png" alt="photo1"/>
+									<span class="link" ><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/misiuszalikP.png" data-lightbox="rys3" data-title="Miś do gry"><img style="width: 340px; margin-top: -44px; margin-left: -30px;" src="img/rendery/misiuszalikP.png" alt="photo1"/>
+									<span class="link" ><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>
+							
+							<div class="kafel">
+								<div class="photo">
+									<a href="img/rendery/niebieskaczacha.png" data-lightbox="rys3" data-title="Czaszka"><img style="width: 330px; margin-top: -95px; margin-left: -25px;" src="img/rendery/niebieskaczacha.png" alt="photo1"/>
+									<span class="link" ><span class="icon"><i class="icon-search"></i></span></span>
+									</a>
+								</div>
+							</div>					
+						</div>
+					<div class="text">Rendery 3D</div>
+				  </div>
+
+			
+			</div>
+			
+			<button class="more">Chcesz więcej?</button>
+
+		</div>
+	</article>
+	
+	<div id="bg4">
+		<div id="contact">
+		<h2>Kontakt</h2>
+			<div id="info">
+				Chciałbyś skomentować, podzielić się swoją opinią prywatnie, zapytać o coś? Pisz śmiało na adres mailowy:
+					<br/><br/>
+					<i class="icon-mail"></i>martaglowacka2014@gmail.com
+					
+					<div id="icons2">
+									<i class="icon-facebook"></i>
+									<i class="icon-tumblr"></i>
+									<i class="icon-deviantart"></i>
+									<i class="icon-wordpress"></i>
+									<i class="icon-youtube-play"></i>		
+					</div>
+			</div>
+			<div id="pole">
+				<input type="imie" placeholder="Imię" onfocus="this.placeholder=''" onblur="this.placeholder='Imię'"></input>
+				<input type="email" placeholder="E-mail" onfocus="this.placeholder=''" onblur="this.placeholder='E-mail'"></input>
+				<input type="temat" placeholder="Temat" onfocus="this.placeholder=''" onblur="this.placeholder='Temat'"></input>
+				<textarea rows="4" cols="44" placeholder="Wiadomość" onfocus="this.placeholder=''" onblur="this.placeholder='Wiadomość'"></textarea>
+				<button id="send">Send</button>
+			</div>
+			
+			<div style="clear:both;"></div>
+			</div>
+		</div>
+		
+		</contact>
+
+		<div id="bg5">
+			<footer>
+				<p>Wszystkie prawa zastrzeżone &copy 2017 Marta Głowacka Dziękuję za wizytę!</p>
+				<button class="strzalka-g"><i class="icon-angle-up"></i></button>
+				<div style="clear:both;"></div>
+			</footer>
+		</div>
+		
+	</main>
+
+	<script src="lightbox/js/lightbox.js"></script>
+	<script>
+		// Oil Painting
+// Ported from flash project - http://wonderfl.net/c/92Ul
+//
+//
+function OilPainting(){
+  
+  var canvas;
+	var context;
+
+	var width;
+	var height;
+
+	var startPos = {x: window.innerWidth/2, y: window.innerHeight/2};
+	var prevPos = {x: window.innerWidth/2, y: 0};
+	var dist = {x: 0, y: 0};
+	var colour = '#'+(16777215).toString(16);
+	
+	
+	this.initialize = function(){
+		canvas  = document.getElementById("canvas");
+		context = canvas.getContext('2d');
+	
+		width = window.innerWidth
+		height = window.innerHeight
+		
+		canvas.width = width;
+		canvas.height = height;
+	
+		canvas.addEventListener('mousemove', MouseMove, false);
+		canvas.addEventListener('click', MouseDown, false);
+		canvas.addEventListener('dblclick', MouseDbl, false);	
+	}
+	
+	
+	var MouseMove = function(e) {
+		var distance = Math.sqrt(Math.pow(prevPos.x - startPos.x, 2) +
+								 Math.pow(prevPos.y - startPos.y, 2));
+								 
+		var a = distance * 10 * (Math.pow(Math.random(), 2) - 0.5);
+		
+		var r = Math.random() - 0.5;
+		
+		var size = (Math.random() * 15) / distance;
+		
+		dist.x = (prevPos.x - startPos.x) * Math.sin(0.5) + startPos.x;
+		dist.y = (prevPos.y - startPos.y) * Math.cos(0.5) + startPos.y;
+		
+		startPos.x = prevPos.x;
+		startPos.y = prevPos.y;
+		
+		prevPos.x = (e.layerX);
+		prevPos.y = (e.layerY);
+	   
+	   // ------- Draw -------
+	   var lWidth = (Math.random()+20/10-0.5)*size+(1-Math.random()+30/20-0.5)*size;
+	   context.lineWidth = lWidth;
+	   context.strokeWidth = lWidth;
+	   
+	   context.lineCap = 'round';
+	    context.lineJoin = 'round';
+	    
+	   context.beginPath(); 
+	   context.moveTo(startPos.x, startPos.y);
+	   context.quadraticCurveTo(dist.x, dist.y, prevPos.x, prevPos.y);
+	   
+	   context.fillStyle = colour;
+	   context.strokeStyle = colour;
+	
+	   context.moveTo(startPos.x + a, startPos.y + a);
+	   context.lineTo(startPos.x + r + a, startPos.y + r + a);
+	   
+	   context.stroke();
+	   context.fill();
+	   
+	   context.closePath();
+	}
+	
+	var MouseDown = function(e) {
+		e.preventDefault();
+		colour = '#'+Math.floor(Math.random()*16777215).toString(16);
+		context.fillStyle = colour;
+	    context.strokeStyle = colour;
+	}
+	
+	var MouseDbl = function(e) {
+		e.preventDefault();
+		context.clearRect(0, 0, width, height);
+	}
+		
+}
+
+var app = new OilPainting();
+app.initialize();
+	</script>
+
+</body>
+
+<html>
